@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SQL DevOps</title>
+  <subtitle>where SQL Server and Open Source converge</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://sqldevops.tech/"/>
+  <updated>2017-01-04T09:23:57.000Z</updated>
+  <id>https://sqldevops.tech/</id>
+  
+  <author>
+    <name>ori donner</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL Server DevOps jumpstart</title>
+    <link href="https://sqldevops.tech/2016/11/SQL-Server-jumpstart-session/"/>
+    <id>https://sqldevops.tech/2016/11/SQL-Server-jumpstart-session/</id>
+    <published>2016-11-30T16:30:35.000Z</published>
+    <updated>2017-01-04T09:23:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>On next Monday, 5 Dec 2016, I will give a 90 min session about SQL Server database devlopment, in the era of DevOps and open source.<br>I will cover some basic agile software development concepts from the perspective of a SQL Server DBA.  </p>
+<p>Join our <a href="https://www.meetup.com/Data-platform-Meetup-Israel/events/235727982/" target="_blank" rel="external">Meetup</a>.</p>
+
+	<iframe src="//www.slideshare.net/slideshow/embed_code/key/HxXRAeV3yPuywU" style="width:100%;height:550px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:5px">
+
+</div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;On next Monday, 5 Dec 2016, I will give a 90 min session about SQL Server database devlopment, in the era of DevOps and open source.&lt;br&gt;I
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
