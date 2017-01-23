@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sqldevops.tech/"/>
-  <updated>2017-01-04T09:23:57.000Z</updated>
+  <updated>2017-01-23T15:57:36.153Z</updated>
   <id>https://sqldevops.tech/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL Server Loves Open Source</title>
+    <link href="https://sqldevops.tech/2017/01/SQL-Server-Loves-Open-Source/"/>
+    <id>https://sqldevops.tech/2017/01/SQL-Server-Loves-Open-Source/</id>
+    <published>2017-01-15T22:00:00.000Z</published>
+    <updated>2017-01-23T15:57:36.153Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Microsoft-Loves-Open-Source"><a href="#Microsoft-Loves-Open-Source" class="headerlink" title="Microsoft Loves Open Source"></a>Microsoft Loves Open Source</h2><p><img src="/images/microsoft_loves_linux.png" class="pull-left col-md-6"> Microsoft approach towards open source has dramatically changed since its CEO Satya Nadella took office in February 2014.<br><a href="https://www.youtube.com/watch?v=HjuGBCB0WSQ&amp;t=608s" target="_blank" rel="external">“Microsoft Loves Open Source”</a>  became a strategy, not just a marketing slogan. On Nov. 16, 2016,  Microsoft released its first <a href="https://blogs.technet.microsoft.com/dataplatforminsider/2016/11/16/announcing-sql-server-on-linux-public-preview-first-preview-of-next-release-of-sql-server/" target="_blank" rel="external">SQL Server version running on Linux</a> and <a href="https://techcrunch.com/2016/11/16/microsoft-joins-the-linux-foundation/" target="_blank" rel="external">joined the Linux Foundation</a> as a Platinium member. </p>
+<p>Open-Source eventually revealed its massive impact on the software engineering world. It has been around for more than 30 years, not to be ignored anymore.</p>
+<p>Microsoft’s new attitude towards open source is not surprising at all. Big Data and DevOps, two of the hottest buzzwords in the High-Tech industry, profoundly inspired by open-source projects, are changing the rules of the game. A game where Microsoft wants to play, not just as a member, but as a game-changer.</p>
+<p>The time has arrived for us, SQL Server DBA’s, to adapt ourselves to this change, open our minds to new ideas, concepts, and tools, from the open source community.</p>
+<h2 id="SQL-Server-Loves-Open-Source"><a href="#SQL-Server-Loves-Open-Source" class="headerlink" title="SQL Server Loves Open Source"></a>SQL Server Loves Open Source</h2><p>As a SQL Server DBA, raised on Microsoft technologies, I understand the difficulties associated with adjusting to open source. It is unlike learning another new technology; it is more like adapting yourself to a different culture. It means breaking all your comfort zones. </p>
+<p><img src="/images/sql_server_loves_opensource.png" class="pull-right col-md-7"> Adjustment process takes time, practice and patience, but it’s worth the effort and time invested. The more comfortable you become with those tools and concepts, the more you will discover their power, how they collaborate, helping you with cross-platform heavy lifting duties; Offering, usually, unbelievably, simpler and cheaper solutions.</p>
+<h2 id="DevOps"><a href="#DevOps" class="headerlink" title="DevOps"></a>DevOps</h2><p>From my point of view, database development projects, are not different from any other software development projects. If you write code, build, test and deploy it, you experience the same challenges and difficulties that software developers experience. So why not enjoy the enormous benefits of DevOps?</p>
+<p>However, always remember, <a href="https://opensource.com/business/15/2/without-open-source-there-would-be-no-devops" target="_blank" rel="external">without open source, there would be no DevOps !</a></p>
+<h2 id="SQL-DevOps-Blog"><a href="#SQL-DevOps-Blog" class="headerlink" title="SQL DevOps Blog"></a>SQL DevOps Blog</h2><p>So, what is this Blog all about ?</p>
+<ul>
+<li><p>Integrating SQL Server with Open-Source tools (DevOps mainly, not only).</p>
+</li>
+<li><p>Smoothening your Open-Source and Command Line learning curve. </p>
+</li>
+<li><p>Automation and Command Line tools (Microsoft and Open Source).</p>
+</li>
+</ul>
+<p>It’s all about, creating a central hub for sharing news, knowledge and best practices, for SQL Server Devpolers who love Open Source.</p>
+<h2 id="Comming-next…"><a href="#Comming-next…" class="headerlink" title="Comming next…"></a>Comming next…</h2><p>This was just an introduction; In the next post, we will take the first step in our DevOps journey, by presenting tools for a basic SQL Server DevOps pipeline.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Microsoft-Loves-Open-Source&quot;&gt;&lt;a href=&quot;#Microsoft-Loves-Open-Source&quot; class=&quot;headerlink&quot; title=&quot;Microsoft Loves Open Source&quot;&gt;&lt;/a&gt;Micro
+    
+    </summary>
+    
+      <category term="Intoduction" scheme="https://sqldevops.tech/categories/Intoduction/"/>
+    
+    
+      <category term="SQL Server" scheme="https://sqldevops.tech/tags/SQL-Server/"/>
+    
+      <category term="DevOps" scheme="https://sqldevops.tech/tags/DevOps/"/>
+    
+      <category term="Open Source" scheme="https://sqldevops.tech/tags/Open-Source/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL Server DevOps jumpstart</title>
