@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sqldevops.tech/"/>
-  <updated>2017-01-23T15:57:36.153Z</updated>
+  <updated>2017-02-28T14:54:39.263Z</updated>
   <id>https://sqldevops.tech/</id>
   
   <author>
@@ -14,6 +14,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Starting your SQL Server&#39;s DevOps journey</title>
+    <link href="https://sqldevops.tech/2017/02/The-DevOps-Pipeline-1/"/>
+    <id>https://sqldevops.tech/2017/02/The-DevOps-Pipeline-1/</id>
+    <published>2017-02-28T12:08:47.000Z</published>
+    <updated>2017-02-28T14:54:39.263Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="DevOps-Pipeline"><a href="#DevOps-Pipeline" class="headerlink" title="DevOps Pipeline"></a>DevOps Pipeline</h2><p>The core idea of DevOps is to create a repeatable, reliable and incrementally improving process for taking software from concept to customer, enabling a constant flow of changes into production via an automated software production line.</p>
+<p>The DevOps pipeline (or Continuous Delivery pipeline), in general, consists of three major stages. Each stage is aimed at verifying the quality of new features and prevent errors from continuing forward in the pipe. DevOps operation refers both application and server level. </p>
+<p><strong>Build :</strong> Source code is transferred into a machine-readable package (binaries); New features implemented by the developers are integrated into the source code server on a continuous basis, built, and unit tested.</p>
+<p><strong>Test :</strong> The build package is tested to ensure it meets all desired system qualities, in aspects of functionality, security, performance and compliance.</p>
+<p><strong>Deploy :</strong> The deployment is automated, allowing for the reliable delivery of new functionality to users within minutes</p>
+<p>This is my three steps advice to start your SQL Server DevOps journey :</p>
+<h2 id="Step-1-Changing-The-Environment"><a href="#Step-1-Changing-The-Environment" class="headerlink" title="Step 1 - Changing The Environment"></a>Step 1 - Changing The Environment</h2><p>Theoretically, developing a SQL Server database project is equal to developing any other software solution; It’s only a matter of the developing tool you use. Software developers usually work in an offline editing mode - they write code, compile it, and only after running some tests, deploy it on a running machine.       </p>
+<p>DBA’s are used to SQL Server Management Studio as their developing tool. SSMS is an online editing tool, works on a live, running system. The first step to being taken to start building the DevOps pipeline is moving to an offline editing mode by changing our developing environment to Visual Studio SSDT.   </p>
+<p><img src="/images/visual_studio.jpg" class="pull-right col-md-4"> <a href="https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx" target="_blank" rel="external">SQL Server Data Tools</a> is a database project development toolset, included in Visual Studio Comunity Edition since 2013, as part of the core product (not to be discussed here, the <a href="http://blog.nwcadence.com/sql-server-data-tools-clearing-up-the-confusion/" target="_blank" rel="external">Visual Studio SSDT shell</a> as a part of the SQL Server installation). The SSDT project system allows developers to have a fully representative source-code backed model of their database for offline development. </p>
+<h2 id="Step-2-Under-the-hood-of-SSDT"><a href="#Step-2-Under-the-hood-of-SSDT" class="headerlink" title="Step 2 - Under the hood of SSDT"></a>Step 2 - Under the hood of SSDT</h2><p>Visual Studio SSDT is an IDE;  An integration of different tools and frameworks under a unified GUI. To build and automate the DevOps pipeline, it is necessary to undercover some of Visual Studio’s command line tools:</p>
+<ul>
+<li><p><a href="https://msdn.microsoft.com/en-us/library/dd393574.aspx#BKMK_CommandPrompt" target="_blank" rel="external"><strong> MSBuild.exe </strong></a> : Visual Studio IDE serializes T-SQL code files (.sql) into MSBuild XML file (.sqlproj). When running code in Visual Studio, MSBuild is executing the MSBuild file under the hood, outputting a database scheme package (DACPAC).  </p>
+</li>
+<li><p><a href="https://msdn.microsoft.com/en-us/library/ms182489.aspx" target="_blank" rel="external"><strong>MSTest</strong></a> : Visual Studio tool used to run tests.</p>
+</li>
+<li><p><a href="https://msdn.microsoft.com/en-us/library/hh550080(v=vs.103).aspx" target="_blank" rel="external"><strong> Sqlpackage.exe </strong></a>: Database project deployment and schema compare tool in  Visual Studio, is being executed by the Sqlpackage tool.</p>
+</li>
+</ul>
+<h2 id="Step-3-SQL-Server-DevOps-Pipeline"><a href="#Step-3-SQL-Server-DevOps-Pipeline" class="headerlink" title="Step 3 - SQL Server DevOps Pipeline"></a>Step 3 - SQL Server DevOps Pipeline</h2><p>What has remained to complete the basic SQL Server DevOps pipeline is choosing the source code management tool and the automation tool to orchestrate the process.</p>
+<ul>
+<li><p><strong>Git :</strong> Client side source code management tool. </p>
+</li>
+<li><p><strong>GitLab-CI :</strong> GitHub’s “enterprise edition” with Continuous Integration and Continuous Deployment capabilities; GitLab-CI is used as a source code server and Continuous Integration tool.</p>
+</li>
+</ul>
+<p><img src="/images/DevOpsPipeline.bmp"> Figure 1</p>
+<p>Figure 1 describes a full possible SQL Server DevOps pipeline design, with the proper automation tools. These set of tools are my best choice; you can choose your own. </p>
+<hr>
+<h2 id="Coming-next…"><a href="#Coming-next…" class="headerlink" title="Coming next…"></a>Coming next…</h2><p>This is the first post in the series of “The DevOps pipeline” posts. In the next blog post, I will cover the in more depth the differences between SSMS and SSDT; Meanwhile, <a href="https://www.youtube.com/watch?v=e6Z_MpXXnHU&amp;t=3s" target="_blank" rel="external">follow this link</a> and take your first steps in SSDT.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;DevOps-Pipeline&quot;&gt;&lt;a href=&quot;#DevOps-Pipeline&quot; class=&quot;headerlink&quot; title=&quot;DevOps Pipeline&quot;&gt;&lt;/a&gt;DevOps Pipeline&lt;/h2&gt;&lt;p&gt;The core idea
+    
+    </summary>
+    
+    
+      <category term="SSDT" scheme="https://sqldevops.tech/tags/SSDT/"/>
+    
+      <category term="MSBuild" scheme="https://sqldevops.tech/tags/MSBuild/"/>
+    
+      <category term="Sqlpackage" scheme="https://sqldevops.tech/tags/Sqlpackage/"/>
+    
+      <category term="Git" scheme="https://sqldevops.tech/tags/Git/"/>
+    
+      <category term="GitLab-CI" scheme="https://sqldevops.tech/tags/GitLab-CI/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL Server Loves Open Source</title>

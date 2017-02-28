@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sqldevops.tech/2017/02/The-DevOps-Pipeline-1/</loc>
+    
+    <lastmod>2017-02-28T14:54:39.263Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sqldevops.tech/2017/01/SQL-Server-Loves-Open-Source/</loc>
     
     <lastmod>2017-01-23T15:57:36.153Z</lastmod>
