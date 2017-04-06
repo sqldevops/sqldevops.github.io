@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>SQL DevOps</title>
-  <subtitle>where SQL Server and Open Source converge</subtitle>
+  <subtitle>Where SQL Server and Open Source converge</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sqldevops.tech/"/>
-  <updated>2017-02-28T14:54:39.263Z</updated>
+  <updated>2017-04-06T09:20:10.847Z</updated>
   <id>https://sqldevops.tech/</id>
   
   <author>
@@ -14,6 +14,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3 good reasons for starting SQL Server vNext.</title>
+    <link href="https://sqldevops.tech/2017/04/SQL-Server-vNext-Vagrant-Box/"/>
+    <id>https://sqldevops.tech/2017/04/SQL-Server-vNext-Vagrant-Box/</id>
+    <published>2017-04-02T08:07:02.000Z</published>
+    <updated>2017-04-06T09:20:10.847Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SQL-Server-vNext"><a href="#SQL-Server-vNext" class="headerlink" title="SQL Server vNext"></a>SQL Server vNext</h2><p>Nov. 2016, Microsoft announced it’s first SQL Server Linux version (<a href="https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux" target="_blank" rel="external">vNext</a>); On March 2017 CTP 1.4 was launched; An average rate of approximately one CTP update per month; Microsoft is taking things seriously!   </p>
+<p>You probably ask yourself; Why should a SQL Server DBA, works his entire life on Windows OS,  be interested in SQL Server running on Linux?  </p>
+<p>I’m going to give you the tools and some good reasons for running SQL Server vNext on your PC’s VirtualBox, for your local Dev\Test\QA environment: </p>
+<h3 id="1-Fast-amp-Agile"><a href="#1-Fast-amp-Agile" class="headerlink" title="1. Fast &amp; Agile"></a><em>1. Fast &amp; Agile</em></h3><p>Build a “disposable” Dev\Test\QA environment; Spin up the environment (SQL Server on Linux OS) from source code in about <u><strong>50 sec </strong></u> and get a fresh new environment. If code executes not as expected, just destroy the VM and rebuild it. </p>
+<h3 id="2-Simple"><a href="#2-Simple" class="headerlink" title="2. Simple"></a><em>2. Simple</em></h3><p>Follow the instructions bellow, in just 5 min reading; Simple to maintain and configure; No previous Linux background is required; No need to change environments works on your Windows environment.</p>
+<h3 id="3-Cost-effective"><a href="#3-Cost-effective" class="headerlink" title="3. Cost effective"></a><em>3. Cost effective</em></h3><p>Even though SQL Server Developer edition is free, the hosting Windows Server license, costs. You can save yourself some of those licenses, by running SQL Server on Linux.</p>
+<h3 id="4-Mobile"><a href="#4-Mobile" class="headerlink" title="4. Mobile"></a><em>4. Mobile</em></h3><p>Build a local Dev\Test\QA Lab on your Windows PC with VirtualBox; Continue working on your projects when detached from the network or have no internet access.</p>
+<h2 id="Build-a-local-Lab-on-your-Windows-PC"><a href="#Build-a-local-Lab-on-your-Windows-PC" class="headerlink" title="Build a local Lab on your Windows PC"></a>Build a local Lab on your Windows PC</h2><p>First, ensure <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a> and <a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">Vagrant</a> are installed on your PC.  VirtualBox is a cross-platform virtualization application (Hypervisor) that builds virtual machines (guests) on the host.  Vagrant is easy to use tool for managing and automating the Virtual Machine(VM). </p>
+<h2 id="Vagrant-Box"><a href="#Vagrant-Box" class="headerlink" title="Vagrant Box"></a>Vagrant Box</h2><p>Vagrant uses a Vagrant box image to spin-up a VirtualBox VM. The image is built with the help of <a href="https://www.packer.io/intro/index.html" target="_blank" rel="external">Packer</a> and saved in <a href="https://atlas.hashicorp.com/boxes/search?utm_source=vagrantcloud.com&amp;vagrantcloud=1" target="_blank" rel="external">Vagrant box repository</a>.<br>With the help of <a href="https://github.com/boxcutter" target="_blank" rel="external">Boxcutter</a> (ready made Packer templates),  I have created a SQL Server vNext 14.0.405 Vagrant box, running on Ubuntu 16.04.2 . You can view the Packer template code on <a href="https://github.com/sqldevops/Packer-SQL-Server-vNext" target="_blank" rel="external">SqlDevops GitHub repo</a>, and download the Vagrant Box from <a href="https://atlas.hashicorp.com/sqldevops/boxes/sql-server-vnext" target="_blank" rel="external">SqlDevops Vagrant repo</a>.</p>
+<h2 id="Spin-up-the-Server"><a href="#Spin-up-the-Server" class="headerlink" title="Spin-up the Server"></a>Spin-up the Server</h2><p>In order to spin up a VM with Vagrant, follow these 4 simple steps:</p>
+<ol>
+<li><p>Create a new folder (vNext) on your host machine, and switch into it:<br><code>c:\&gt; mkdir vNext</code><br><code>c:\&gt; cd vNext</code></p>
+</li>
+<li><p>Start a new Vagrantfile:<br><code>c:\vNext&gt; Vagrant init -m</code></p>
+</li>
+<li><p>Open the Vagrantfile with your favorite text editor and copy the code below :<br><code>Vagrant.configure(&quot;2&quot;) do |config|</code><br><code>config.vm.define &quot;mssql&quot; do |mssql|</code><br>   <code>mssql.vm.box = &quot;sqldevops/sql-server-vnext&quot;</code><br>   <code>mssql.vm.hostname = &quot;mssql-vnext-01&quot;</code><br>   <code>mssql.vm.network &quot;private_network&quot;, ip:&quot;192.168.33.10&quot;</code><br>   <code>mssql.vm.provider &quot;virtualbox&quot; do |p|</code><br>   <code>p.name=&quot;mssql-vnext-01&quot;</code><br>   <code>end</code><br> <code>end</code><br><code>end</code></p>
+</li>
+<li>Spin up the server :<br><code>c:\vNext&gt; Vagrant up</code></li>
+</ol>
+<p>The VM’s network configuration is set in the Vagrantfile; I have set it for a local network with a specific IP. More configuration settings can be found on <a href="https://www.vagrantup.com/docs/index.html" target="_blank" rel="external">Vagrant Documentation</a>.</p>
+<p>First time executed, Vagrant will download the box locally (it takes a bit of a time). After the box is downloaded, it takes approx. 50 seconds to spin up a full SQL Server vNext instance with the OS from scratch.</p>
+<h2 id="Connect-to-SQL-Server-vNext"><a href="#Connect-to-SQL-Server-vNext" class="headerlink" title="Connect to SQL Server vNext"></a>Connect to SQL Server vNext</h2><p>Once the VM is up and running, it can be connected to. Open SSMS, in the <strong> Connect to Server </strong>window, enter the Server’s IP, as set in the Vagrant file. Use the SQL Server Authentication mode, and login  as “<strong>sa</strong>“ with  this password  “<strong>vnext@2017</strong>“.<br>If you want to name your VM’s server instead of using its IP, add this row to the hosts file on your host (c:\windows\system32\drivers\etc\hosts)  , where <strong>mssql-vnext</strong>  is the Servers name:<br><code>mssql-vnext 192.168.33.10</code></p>
+<h2 id="Open-a-terminal-to-Ubuntu-Server"><a href="#Open-a-terminal-to-Ubuntu-Server" class="headerlink" title="Open a terminal to Ubuntu Server"></a>Open a terminal to Ubuntu Server</h2><p>In case you want to open a terminal to the Linux Ubuntu OS hosting your SQL Server vNext, just execute this command:<br><code>c:\vNext&gt; Vagrant ssh</code><br>For further information about managing SQL Server on Ubuntu, follow this <a href="https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-management-overview" target="_blank" rel="external">Link</a></p>
+<h2 id="SQL-Server-vNext-further-updates"><a href="#SQL-Server-vNext-further-updates" class="headerlink" title="SQL Server vNext further updates"></a>SQL Server vNext further updates</h2><p>Follow SQL Server vNext updates, by joining the early adoption program, on this <a href="http://sqlservervnexteap.azurewebsites.net/" target="_blank" rel="external">link</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;SQL-Server-vNext&quot;&gt;&lt;a href=&quot;#SQL-Server-vNext&quot; class=&quot;headerlink&quot; title=&quot;SQL Server vNext&quot;&gt;&lt;/a&gt;SQL Server vNext&lt;/h2&gt;&lt;p&gt;Nov. 2016, Mic
+    
+    </summary>
+    
+    
+      <category term="vNext" scheme="https://sqldevops.tech/tags/vNext/"/>
+    
+      <category term="Vagrant" scheme="https://sqldevops.tech/tags/Vagrant/"/>
+    
+      <category term="VirtualBox" scheme="https://sqldevops.tech/tags/VirtualBox/"/>
+    
+      <category term="Virtual Machine" scheme="https://sqldevops.tech/tags/Virtual-Machine/"/>
+    
+      <category term="Linux" scheme="https://sqldevops.tech/tags/Linux/"/>
+    
+      <category term="Packer" scheme="https://sqldevops.tech/tags/Packer/"/>
+    
+      <category term="Ubuntu 16.04" scheme="https://sqldevops.tech/tags/Ubuntu-16-04/"/>
+    
+  </entry>
   
   <entry>
     <title>Starting your SQL Server&#39;s DevOps journey</title>
