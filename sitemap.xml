@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sqldevops.tech/2017/05/vNext-Linked-Server/</loc>
+    
+    <lastmod>2017-05-16T14:58:55.813Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sqldevops.tech/2017/04/SQL-Server-vNext-Vagrant-Box/</loc>
     
     <lastmod>2017-04-06T09:20:10.847Z</lastmod>
