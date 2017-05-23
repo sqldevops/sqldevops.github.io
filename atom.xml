@@ -55,7 +55,7 @@
     <link href="https://sqldevops.tech/2017/04/SQL-Server-vNext-Vagrant-Box/"/>
     <id>https://sqldevops.tech/2017/04/SQL-Server-vNext-Vagrant-Box/</id>
     <published>2017-04-02T08:07:02.000Z</published>
-    <updated>2017-05-23T09:29:36.709Z</updated>
+    <updated>2017-05-23T09:31:47.073Z</updated>
     
     <content type="html"><![CDATA[<h2 id="SQL-Server-vNext"><a href="#SQL-Server-vNext" class="headerlink" title="SQL Server vNext"></a>SQL Server vNext</h2><p>Nov. 2016, Microsoft announced it’s first SQL Server Linux version (<a href="https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux" target="_blank" rel="external">vNext</a>); On March 2017 CTP 1.4 was launched; An average rate of approximately one CTP update per month; Microsoft is taking things seriously!   </p>
 <p>You probably ask yourself; Why should a SQL Server DBA, works his entire life on Windows OS,  be interested in SQL Server running on Linux?  </p>
@@ -72,10 +72,7 @@
 </li>
 <li><p>Start a new Vagrantfile:<br><code>c:\vNext&gt; Vagrant init -m</code></p>
 </li>
-<li><p>Open the Vagrantfile with your favorite text editor and copy the code below :<br><code>Vagrant.configure(&quot;2&quot;) do |config|</code><br><code>config.vm.define &quot;mssql&quot; do |mssql|</code><br>   <code>mssql.vm.box = &quot;sqldevops/sql-server-vnext&quot;</code><br>   <code>mssql.vm.hostname = &quot;mssql-vnext&quot;</code><br>   <code>mssql.vm.network &quot;private_network&quot;, ip:&quot;192.168.33.10&quot;</code><br>   <code>mssql.vm.provider &quot;virtualbox&quot; do |p|</code></p>
-<pre><code>`p.name=&quot;mssql-vnext&quot;`
-`p.memory=&quot;3500&quot;`
-</code></pre><p>   <code>end</code><br> <code>end</code><br><code>end</code></p>
+<li><p>Open the Vagrantfile with your favorite text editor and copy the code below :<br><code>Vagrant.configure(&quot;2&quot;) do |config|</code><br><code>config.vm.define &quot;mssql&quot; do |mssql|</code><br>   <code>mssql.vm.box = &quot;sqldevops/sql-server-vnext&quot;</code><br>   <code>mssql.vm.hostname = &quot;mssql-vnext&quot;</code><br>   <code>mssql.vm.network &quot;private_network&quot;, ip:&quot;192.168.33.10&quot;</code><br>   <code>mssql.vm.provider &quot;virtualbox&quot; do |p|</code><br>   <code>p.name=&quot;mssql-vnext&quot;</code><br>   <code>p.memory=&quot;3500&quot;</code><br>   <code>end</code><br> <code>end</code><br><code>end</code></p>
 </li>
 <li>Spin up the server :<br><code>c:\vNext&gt; Vagrant up</code></li>
 </ol>
