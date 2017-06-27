@@ -14,7 +14,7 @@
 </li>
 <li><p>Start a new Vagrantfile:<br><code>c:\vNext&gt; Vagrant init -m</code></p>
 </li>
-<li><p>Open the Vagrantfile with your favorite text editor and copy the code below :<br><code>Vagrant.configure(&quot;2&quot;) do |config|</code><br><code>config.vm.define &quot;mssql&quot; do |mssql|</code><br>   <code>mssql.vm.box = &quot;sqldevops/sql-server-vnext&quot;</code><br>   <code>mssql.vm.hostname = &quot;mssql-vnext&quot;</code><br>   <code>mssql.vm.network &quot;private_network&quot;, ip:&quot;192.168.33.10&quot;</code><br>   <code>mssql.vm.provider &quot;virtualbox&quot; do |p|</code><br>   <code>p.name=&quot;mssql-vnext&quot;</code><br>   <code>p.memory=&quot;3500&quot;</code><br>   <code>end</code><br> <code>end</code><br><code>end</code></p>
+<li><p>Open the Vagrantfile with your favorite text editor and copy the code below :<br><code>Vagrant.configure(&quot;2&quot;) do |config|</code><br><code>config.vm.define &quot;mssql&quot; do |mssql|</code><br>   <code>mssql.vm.box = &quot;sqldevops/sql-server-vnext&quot;</code><br>   <code>mssql.vm.hostname = &quot;mssql-vnext&quot;</code><br>   <code>mssql.vm.network &quot;private_network&quot;, ip:&quot;192.168.33.10&quot;</code><br> <code>end</code><br><code>end</code></p>
 </li>
 <li>Spin up the server :<br><code>c:\vNext&gt; Vagrant up</code></li>
 </ol>
